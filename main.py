@@ -1,5 +1,5 @@
 # import necessary functions
-#from IPython.display import clear_output
+from IPython.display import clear_output
 
 # global list variable
 cart = []
@@ -7,7 +7,7 @@ value_cart = []
 
 # create function to add items to cart
 def addItem(item, cost):
-    #clear_output()
+    clear_output()
     cart.append(item)
     value_cart.append(cost)
     print('{} has been added.'.format(item))
@@ -15,7 +15,7 @@ def addItem(item, cost):
 
 # create function to remove items from cart
 def removeItem(item):
-    #clear_output()
+    clear_output()
     try:
         if item.isdigit():
             item_removed = cart.pop(int(item) - 1)
@@ -30,7 +30,7 @@ def removeItem(item):
         
 # create function to show items in cart
 def showCart():
-    #clear_output()
+    clear_output()
     if cart:
         print('Here is your cart:')
         for i in range(len(cart)):
@@ -40,7 +40,7 @@ def showCart():
 
 # create function to clear items from cart
 def clearCart():
-    #clear_output()
+    clear_output()
     cart.clear()
     value_cart.clear()
     print('Your cart is empty.')
@@ -53,7 +53,7 @@ def total_amount():
     return total
 # create main function that loops until the user quits
 
-def check_validity(num):                                                   # thisdef function adds every digit of the card number to a list and,
+def check_validity(num):                                                   # this function adds every digit of the card number to a list and,
     validlist=[]
     credit_check = False
     #while not credit_check:
